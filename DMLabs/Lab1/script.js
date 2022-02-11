@@ -8,8 +8,20 @@ function isValidate(message) {
     }
     for(let i = 0; i < arr.length; i++) {
         if(arr[i].length != 4) {
-            error_message = "Элемент множества должен содеражть 4 цифры!";
+            error_message = "Элемент множества должен содеражть 4 символа!";
             return false; 
+        }
+        if(!(Number.isInteger(Number(arr[i][0])))) {
+            error_message = "Первый сиимвол должен быть цифрой!"
+            return false;
+        }
+        if(!(Number.isInteger(Number(arr[i][1])))) {
+            error_message = "Второй сиимвол должен быть цифрой!"
+            return false;
+        }
+        if(!(Number.isInteger(Number(arr[i][3])))) {
+            error_message = "Четвертый сиимвол должен быть цифрой!"
+            return false;
         }
         if(arr[i][0] % 2 > 0) {
             error_message = "Первая цифра в элемете множества должна быть четной!";
@@ -19,7 +31,7 @@ function isValidate(message) {
             error_message = "Вторая цифра в элемете множества должна быть нечетной!";
             return false; 
         }
-        if(Number.isInteger(Number(arr[i][2]))) {
+        if(arr[i][2] > "z" || arr[i][2] < "A") {
             error_message = "Третий символ должен быть буквой!";
             return false; 
         }
