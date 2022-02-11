@@ -8,7 +8,7 @@ function isValidate(message) {
     }
     for(let i = 0; i < arr.length; i++) {
         if(arr[i].length != 4) {
-            error_message = "Элемент множества должен содеражть 4 символа!";
+            error_message = "Элемент множества должен содержать 4 символа!";
             return false; 
         }
         if(!(Number.isInteger(Number(arr[i][0])))) {
@@ -46,9 +46,28 @@ function isValidate(message) {
 function Calculation() {
     message1 = document.getElementById('first-field').value;
     message2 = document.getElementById('second-field').value;
+    // Проверка валидности
     if (isValidate(message1) && isValidate(message2)){
-        alert("Good")
+        const first_set = new Set(message1.split(" ")); // Получаем два множества из строк, сплитуем по пробелу
+        const second_set = new Set(message2.split(" "));
+        console.log(first_set, second_set);
+        //Объединяем два множества 
+        const union_set = new Set([...first_set, ...second_set]);
+        document.getElementById('union').innerHTML = "Объединение: " + [...union_set.values()];
+        //Пересекаем множества 
+        const intersection_set = new Set([...first_set].filter(x => second_set.has(x)));
+        document.getElementById('int').innerHTML = "Пересечение: " + [...intersection_set.values()];
+        //Дополняем множества 
+        // A \ B
+        const difference_set_a = new Set([...first_set].filter(x => !second_set.has(x)));
+        document.getElementById('diff').innerHTML = "A \\ B: " + [...difference_set_a.values()];
+        // B \ A    
+        const difference_set_b = new Set([...second_set].filter(x => !first_set.has(x)));
+        document.getElementById('diff2').innerHTML = "B \\ A: " + [...difference_set_b.values()];
+        // Симметрическая разность 
+        const symmetric_difference_set = new Set([...difference_set_a, ...difference_set_b]);
+        document.getElementById('sym').innerHTML = "Симметрическая разница: " + [...symmetric_difference_set.values()];
     }else{
-        alert(error_message)
+        alert(error_message);
     }
 }

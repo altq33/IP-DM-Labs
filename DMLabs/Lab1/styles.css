@@ -101,3 +101,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     align-self: center;
     margin-top: 50px;
 }
+
+.results {
+    margin-top: 30px;
+    width: 400px;
+    background-color: rgb(30, 8, 71);
+    height: 105px;
+    border-radius: 8px;
+    border: 2px solid white;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.results span {
+    display: block;
+    margin-bottom: 5px;
+}
