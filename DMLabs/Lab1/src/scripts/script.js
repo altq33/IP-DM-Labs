@@ -12,15 +12,15 @@ function isValidate(message) {
             return false; 
         }
         if(!(Number.isInteger(Number(arr[i][0])))) {
-            error_message = "Первый сиимвол должен быть цифрой!"
+            error_message = "Первый символ должен быть цифрой!"
             return false;
         }
         if(!(Number.isInteger(Number(arr[i][1])))) {
-            error_message = "Второй сиимвол должен быть цифрой!"
+            error_message = "Второй символ должен быть цифрой!"
             return false;
         }
         if(!(Number.isInteger(Number(arr[i][3])))) {
-            error_message = "Четвертый сиимвол должен быть цифрой!"
+            error_message = "Четвертый символ должен быть цифрой!"
             return false;
         }
         if(arr[i][0] % 2 > 0) {
