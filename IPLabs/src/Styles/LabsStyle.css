@@ -67,7 +67,7 @@ body {
 }
 
 .logo {
-    background-image: url(/IPLabs/img/logo.png);
+    background-image: url(../../img/logo.png);
     width: 150px;
     height: 43px;
     margin-right: 20px;
@@ -86,7 +86,7 @@ body {
 .burger-menu {
     height: 35px;
     width: 30px;
-    background-image: url(/IPLabs/logo/bars-solid.svg);
+    background-image: url(../../logo/bars-solid.svg);
     display: none;
     flex: 0 0 auto;
 }
@@ -134,14 +134,14 @@ body {
     display: inline-block;
     width: 30px;
     height: 26px;
-    background-image: url(/IPLabs/logo/vk-brands.svg) ;
+    background-image: url(../../logo/vk-brands.svg) ;
 }
 
 .social:nth-child(2) {
     display: inline-block;
     width: 26px;
     height: 26px;
-    background-image: url(/IPLabs/logo/spotify-brands.svg);
+    background-image: url(../../logo/spotify-brands.svg);
     background-repeat: no-repeat;
 }
 
@@ -149,14 +149,14 @@ body {
     display: inline-block;
     width: 25px;
     height: 26px;
-    background-image: url(/IPLabs/logo/twitter-brands.svg);
+    background-image: url(../../logo/twitter-brands.svg);
 }
 
 .social:nth-child(4) {
     display: inline-block;
     width: 14px;
     height: 24px;
-    background-image: url(/IPLabs/logo/facebook-f-brands.svg);
+    background-image: url(../../logo/facebook-f-brands.svg);
     background-repeat: no-repeat;
 }
 
