@@ -1,0 +1,267 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+body {
+    font-family: Tahoma, sans-serif, Verdana, Geneva;
+}
+
+.wrap {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-container {
+    max-width: 1495px;
+    margin: 0 auto;
+}
+
+
+
+.head-container {
+    padding: 31px;
+    width: 100%;
+    height: 111px;  
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.logo {
+    background-image: url(/IPLabs/img/logo.png);
+    width: 150px;
+    height: 43px;
+    margin-right: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 729px;
+}
+
+.buttons-container {
+    display: flex;
+}
+
+.burger-menu {
+    height: 35px;
+    width: 30px;
+    background-image: url(/IPLabs/logo/bars-solid.svg);
+    display: none;
+    flex: 0 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #fff;
+    width: 97px;
+    height: 35px;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    margin-right: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-links:nth-child(2) {
+    background-color: #FF7862;
+    color: #fff;
+}
+
+.nav-links:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #FF7862;
+    color: white;
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    margin-right: 20px;
+}
+
+.social:first-child {
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    background-image: url(/IPLabs/logo/vk-brands.svg) ;
+}
+
+.social:nth-child(2) {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(/IPLabs/logo/spotify-brands.svg);
+    background-repeat: no-repeat;
+}
+
+.social:nth-child(3) {
+    display: inline-block;
+    width: 25px;
+    height: 26px;
+    background-image: url(/IPLabs/logo/twitter-brands.svg);
+}
+
+.social:nth-child(4) {
+    display: inline-block;
+    width: 14px;
+    height: 24px;
+    background-image: url(/IPLabs/logo/facebook-f-brands.svg);
+    background-repeat: no-repeat;
+}
+
+#main {
+    display: flex;
+    background-color: #04061B;
+    width: 100%;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    width: 650px;
+    flex-wrap: wrap;            
+    height: auto;
+    padding-top: 50px;
+    line-height: 1.2;
+}
+
+.pic-container {  
+    width: 55%;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.about {
+    background: #fff;
+    height: 337px;
+    width: 45%;
+    padding: 30px 10px 10px 10px;
+}
+
+.about h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;  
+}
+
+.more-about {
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    height: 112px;
+}
+
+.more-about p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.foot {
+    margin-left: 10px;
+}
+
+.hobbies {
+    height: 444px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .buttons-container {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 660px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pic-container {
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        padding: 0;  
+    }
+    .about {
+        width: 100%;
+        height: auto;
+    }
+    .more-about {
+        height: auto;
+    }
+    .foot {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .links {
+        display: none;
+    }  
+}
