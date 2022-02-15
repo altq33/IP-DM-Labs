@@ -50,7 +50,6 @@ function Calculation() {
     if (isValidate(message1) && isValidate(message2)){
         const first_set = new Set(message1.split(" ")); // Получаем два множества из строк, сплитуем по пробелу
         const second_set = new Set(message2.split(" "));
-        console.log(first_set, second_set);
         //Объединяем два множества 
         const union_set = new Set([...first_set, ...second_set]);
         document.getElementById('union').innerHTML = "Объединение: " + [...union_set.values()];
