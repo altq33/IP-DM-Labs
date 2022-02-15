@@ -146,10 +146,6 @@ body {
   color: #000;
 }
 
-.nav-links:nth-child(2) {
-  background-color: #ff7862;
-  color: #fff;
-}
 
 .nav-links:hover {
   -webkit-transform: scale(1.1);
@@ -200,67 +196,57 @@ body {
 }
 
 #main {
-  display: flex;
   background-color: #04061b;
   width: 100%;
   flex: 1 1 auto;
-  justify-content: center;
 }
 
 .content {
-  display: flex;
-  width: 650px;
-  flex-wrap: wrap;
-  height: auto;
-  padding-top: 50px;
-  line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
 }
 
-.pic-container {
-  width: 55%;
-  padding-left: 50px;
-  padding-top: 30px;
+.title { 
+    color: white; 
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
 }
 
-.about {
-  background: #fff;
-  height: 337px;
-  width: 45%;
-  padding: 30px 10px 10px 10px;
+.list {
+    color: white;
+    font-size: 36px;
 }
 
-.about h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
+
+.list-item {
+    display: block;
+    color: white;
+    width: 255px;
+    margin-bottom: 25px;
 }
 
-.about p {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
+.inst::before {
+    content:url(../../logo/premium-icon-instagram-4494488.png);
+    padding-right: 20px;
 }
 
-.more-about {
-  width: 100%;
-  background: #fff;
-  padding: 10px;
-  height: 112px;
+.vk::before {
+    content:url(../../logo/premium-icon-vk-2504953.png);
+    padding-right: 20px;
 }
 
-.more-about p {
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+.you::before {
+    content:url(../../logo/premium-icon-youtube-3670147.png);
+    padding-right: 20px;
 }
 
-.foot {
-  margin-left: 10px;
-}
-
-.hobbies {
-  height: 444px;
-  margin-bottom: 20px;
+.shik::before {
+    content:url(../../logo/kanji.png);
+    padding-right: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -274,33 +260,17 @@ body {
   }
 }
 
-@media (max-width: 660px) {
-  .content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .pic-container {
-    margin-bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  .about {
-    width: 100%;
-    height: auto;
-  }
-  .more-about {
-    height: auto;
-  }
-  .foot {
-    margin-bottom: 20px;
+@media (max-width: 760px) {
+  .links-container {
+    width: 500px;
   }
 }
 
 @media (max-width: 480px) {
   .links {
     display: none;
+  }
+  .links-container {
+    width: 300px;
   }
 }
