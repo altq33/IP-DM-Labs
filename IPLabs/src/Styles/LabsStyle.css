@@ -313,6 +313,7 @@ body {
   .nav-links {
     margin-bottom: 20px;
     width: 220px;
+    min-height: 35px;
   }
 
   .burger-menu {
