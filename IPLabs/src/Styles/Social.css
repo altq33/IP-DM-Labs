@@ -89,12 +89,32 @@ body {
   flex-direction: column;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  z-index: 50;
+}
+
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 3;
+}
+
 .fixed-container {
   max-width: 1495px;
   margin: 0 auto;
 }
 
 .head-container {
+  position: relative;
   padding: 31px;
   width: 100%;
   height: 111px;
@@ -110,12 +130,15 @@ body {
   width: 150px;
   height: 43px;
   margin-right: 20px;
+  position: relative;
+  z-index: 5;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
   width: 729px;
+  
 }
 
 .buttons-container {
@@ -128,6 +151,8 @@ body {
   background-image: url(../../logo/bars-solid.svg);
   display: none;
   flex: 0 0 auto;
+  position: relative;
+  z-index: 5;
 }
 
 .nav-links {
@@ -144,8 +169,9 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #000;
+  position: relative;
+  z-index: 5;
 }
-
 
 .nav-links:hover {
   -webkit-transform: scale(1.1);
@@ -155,10 +181,13 @@ body {
   color: white;
 }
 
+
 .media-links {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .social {
@@ -199,6 +228,7 @@ body {
   background-color: #04061b;
   width: 100%;
   flex: 1 1 auto;
+  padding-top: 111px;
 }
 
 .content {
@@ -251,7 +281,30 @@ body {
 
 @media (max-width: 1000px) {
   .buttons-container {
-    display: none;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 130px 0 0 20px; 
+    flex-direction: column;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .buttons-container.active {
+    top: 0;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .nav-links {
+    margin-bottom: 20px;
+    width: 220px;
   }
 
   .burger-menu {
@@ -267,8 +320,12 @@ body {
 }
 
 @media (max-width: 480px) {
-  .links {
+  .media-links {
     display: none;
+  }
+  
+  .burger-menu {
+    order: 3;
   }
   .links-container {
     width: 300px;
