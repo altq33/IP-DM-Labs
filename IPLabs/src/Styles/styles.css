@@ -93,12 +93,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;  
+  width: 100%;
   z-index: 50;
 }
 
 #header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -138,7 +138,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 729px;
-  
 }
 
 .buttons-container {
@@ -312,7 +311,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #fff;
-    padding: 130px 0 0 20px; 
+    padding: 130px 0 0 20px;
     flex-direction: column;
     transition: all 0.3s ease 0s;
     align-items: center;
@@ -381,7 +380,7 @@ body {
   .media-links {
     display: none;
   }
-  
+
   .burger-menu {
     order: 3;
   }
