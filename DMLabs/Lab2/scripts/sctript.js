@@ -19,6 +19,7 @@ function multiplyMatrixBin(A, B) // Перемножение бинарных м
 }
 // Функция проверки валидости
 function isValidate(arr) {
+    console.log(arr);
     errorMessage = ""; 
     if (arr.length != 4) { 
         errorMessage = "Матрица должна содержать 4 строки!";
@@ -32,6 +33,9 @@ function isValidate(arr) {
                 errorMessage = "Введенная матрица должна состоять из 0 и 1!";
             }
         }
+    }
+    if (arr[0][0] == "") {
+        errorMessage = "Массив не должен быть пустым!";
     }
     if (errorMessage) {
         return false; 
@@ -54,7 +58,7 @@ submit.onclick = function() {
         let tempMatrix = multiplyMatrixBin(matrixArray, matrixArray);
         for(let i = 0; i < 4; i++) {
             for(let j = 0; j < 4; j++) {
-                if (!(!(matrixArray[i][j] == 1 && i != j) || matrixArray[j][i] == 0)) {
+                if (!(!((matrixArray[i][j] == 1) && (i != j)) || matrixArray[j][i] == 0)) {
                     halfSym = false;
                 }
                 if (i == j) {
@@ -78,9 +82,9 @@ submit.onclick = function() {
         }
         if (halfSym) { 
             document.querySelector("#cos").innerHTML = "Данная матрица кососимметрична";
-            }else {
-                document.querySelector("#cos").innerHTML = "Данная матрица не кососимметрична";
-            }
+        }else {
+            document.querySelector("#cos").innerHTML = "Данная матрица не кососимметрична";
+        }
         if(sym) {
             document.querySelector("#sym").innerHTML = "Данная матрица симметрична";
         }else {
