@@ -1,6 +1,6 @@
 let errorMessage = ""; 
 let submit = document.querySelector(".button");
-function multiplyMatrixBin(A, B) // Перемножение матриц 
+function multiplyMatrixBin(A, B) // Перемножение бинарных матриц 
 {
     let C = [];
     for (var i = 0; i < 4; i++) {
@@ -17,9 +17,8 @@ function multiplyMatrixBin(A, B) // Перемножение матриц
      }
     return C;
 }
-
+// Функция проверки валидости
 function isValidate(arr) {
-    console.log(arr);
     errorMessage = ""; 
     if (arr.length != 4) { 
         errorMessage = "Матрица должна содержать 4 строки!";
@@ -40,7 +39,7 @@ function isValidate(arr) {
         return true; 
     }
 }
-
+// Основная функция проверки свойств отношений
 submit.onclick = function() {  
     let refl = true;
     let sym = true; 
