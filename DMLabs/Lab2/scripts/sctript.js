@@ -41,12 +41,12 @@ function isValidate(arr) {
 }
 // Основная функция проверки свойств отношений
 submit.onclick = function() {  
-    let refl = true;
+    let refl = true;         // Логические переменные для хранения информации о свойствах 
     let sym = true; 
     let halfSym = true;
     let tranz = true;  
     let matrixArray = document.querySelector(".enter").value.split("\n");
-    for(let i = 0; i < matrixArray.length; i++) {
+    for(let i = 0; i < matrixArray.length; i++) {                     // Считываем двумерный массив, удаляя лишние пробелы
         matrixArray[i] = matrixArray[i].replace(/ +/g, ' ').trim();
         matrixArray[i] = matrixArray[i].split(" ");
     }
@@ -72,9 +72,9 @@ submit.onclick = function() {
             }
         }
         if(refl) {
-            document.querySelector("#refl").innerHTML = "Данная матрица рефлескивна";
+            document.querySelector("#refl").innerHTML = "Данная матрица рефлексивна";
         }else {
-            document.querySelector("#refl").innerHTML = "Данная матрица не рефлескивна";
+            document.querySelector("#refl").innerHTML = "Данная матрица не рефлексивна";
         }
         if (halfSym) { 
             document.querySelector("#cos").innerHTML = "Данная матрица кососимметрична";
@@ -89,7 +89,7 @@ submit.onclick = function() {
         if(tranz) {
             document.querySelector("#tranz").innerHTML = "Данная матрица транзитивна";
         }else {
-            document.querySelector("#tranz").innerHTML = "Данная матрица не тразитивна";
+            document.querySelector("#tranz").innerHTML = "Данная матрица не транзитивна";
         }
     }else {
         alert(errorMessage);
