@@ -3,13 +3,13 @@ let submit = document.querySelector(".button");
 function multiplyMatrixBin(A, B) // Перемножение бинарных матриц 
 {
     let C = [];
-    for (var i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
         C[i] = []; 
     }
-    for (var i = 0; i < 4; i++) {
-         for (var j = 0; j < 4; j++) { 
+    for (let i = 0; i < 4; i++) {
+         for (let j = 0; j < 4; j++) { 
              let t = 0;
-             for (var k = 0; k < 4; k++) {
+             for (let k = 0; k < 4; k++) {
                  t += A[j][k] * B[k][i];
              }
              C[j][i] = t % 2;
