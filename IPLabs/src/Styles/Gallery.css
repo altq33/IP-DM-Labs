@@ -1,0 +1,286 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :focus,
+  :active {
+    outline: none;
+  }
+  a:focus,
+  a:active {
+    outline: none;
+  }
+  
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  button {
+    cursor: pointer;
+  }
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  ul li {
+    list-style: none;
+  }
+  img {
+    vertical-align: top;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+  /*--------------------*/
+  body {
+    font-family: Tahoma, sans-serif, Verdana, Geneva;
+  }
+  
+  .wrap {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    z-index: 50;
+  }
+  
+  #header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 3;
+  }
+  
+  .fixed-container {
+    max-width: 1495px;
+    margin: 0 auto;
+  }
+  
+  .head-container {
+    position: relative;
+    padding: 31px;
+    width: 100%;
+    height: 111px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+  
+  .logo {
+    background-image: url(../../img/logo.png);
+    width: 150px;
+    height: 43px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 729px;
+    
+  }
+  
+  .buttons-container {
+    display: flex;
+  }
+  
+  .burger-menu {
+    height: 35px;
+    width: 30px;
+    background-image: url(../../logo/bars-solid.svg);
+    display: none;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #fff;
+    width: 97px;
+    height: 35px;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    margin-right: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .nav-links:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #ff7862;
+    color: white;
+  }
+  
+  .nav-links:last-child {
+    background-color: #ff7862;
+    color: #fff;
+  }
+  
+  .media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .social {
+    margin-right: 20px;
+  }
+  
+  .social:first-child {
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    background-image: url(../../logo/vk-brands.svg);
+  }
+  
+  .social:nth-child(2) {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../../logo/spotify-brands.svg);
+    background-repeat: no-repeat;
+  }
+  
+  .social:nth-child(3) {
+    display: inline-block;
+    width: 25px;
+    height: 26px;
+    background-image: url(../../logo/twitter-brands.svg);
+  }
+  
+  .social:nth-child(4) {
+    display: inline-block;
+    width: 14px;
+    height: 24px;
+    background-image: url(../../logo/facebook-f-brands.svg);
+    background-repeat: no-repeat;
+  }
+  
+  #main {
+    display: flex;
+    background-color: #04061b;
+    width: 100%;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding-top: 130px;
+  }
+  
+  
+  @media (max-width: 1000px) {
+    
+    .buttons-container {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      padding: 130px 0 0 20px; 
+      flex-direction: column;
+      transition: all 0.3s ease 0s;
+      align-items: center;
+      overflow: auto;
+    }
+  
+    .buttons-container.active {
+      top: 0;
+    }
+  
+    body.lock {
+      overflow: hidden;
+    }
+  
+    .nav-links {
+      margin-bottom: 20px;
+      width: 220px;
+      min-height: 35px;
+    }
+  
+    .burger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .media-links {
+      display: none;
+    }
+    
+    .burger-menu {
+      order: 3;
+    }
+  }
+  
