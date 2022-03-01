@@ -19,7 +19,6 @@ function multiplyMatrixBin(A, B) // Перемножение бинарных м
 }
 // Функция проверки валидости
 function isValidate(arr) {
-    console.log(arr);
     errorMessage = ""; 
     if (arr.length != 4) { 
         errorMessage = "Матрица должна содержать 4 строки!";
