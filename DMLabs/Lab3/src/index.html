@@ -10,14 +10,20 @@
 <body>
     <div class="content">
        <h1 class="lab">Лабораторная работа №3</h1>
-        <form method="" action="" class="form" onsubmit="return false;">
-            <input type="text" class="enter" id="first-field" placeholder="Введите первое множество" autocomplete="off">
-            <input type="text" class="enter" id="second-field" placeholder="Введите второе множество" autocomplete="off">
-            <textarea class="enter area" placeholder="Введите матрицу 4х4" form="form "name="enter"></textarea>
+        <form method="" action="" class="form" onsubmit="return false">
+            <input type="text" class="enter" id="first-set" placeholder="Введите элементы множества A" autocomplete="off">
+            <input type="text" class="enter" id="second-set" placeholder="Введите элементы множества B" autocomplete="off">
+            <input type="text" class="enter" id="relative" placeholder="Введите пары отношения  " autocomplete="off">
             <input type="submit" class="button" value="Рассчитать">
         </form>
         <h2 class="by">Результаты:</h2>
-        <div class="results">
+        <div class="matrix-container">
+             <span id="matrix1"></span>
+             <span id="matrix2"></span>
+             <span id="matrix3"></span>
+             <span id="matrix4"></span>
+        </div>
+        <div class="results">        
             <span id="AB"></span>
             <span id="BA"></span>
         </div>

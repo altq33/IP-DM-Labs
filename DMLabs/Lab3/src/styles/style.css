@@ -96,7 +96,7 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 340px;
+  height: 250px;
 }
 
 .lab {
@@ -165,6 +165,24 @@ h6 {
 }
 
 .results span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.matrix-container {
+  margin-top: 10px;
+  width: 400px;
+  background-color: rgb(30, 8, 71);
+  font-size: 18px;
+  height: 100px;
+  border-radius: 8px;
+  border: 2px solid white;
+  padding-top: 5px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.matrix-container span {
   display: block;
   margin-bottom: 5px;
 }
