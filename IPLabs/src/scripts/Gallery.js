@@ -43,9 +43,6 @@ document.querySelector(".left-arrow").addEventListener("click", function(e) {
     if(count == img.length - 1) {
         document.querySelector("#point1").classList.remove("dots-active");
         document.querySelector("#point4").classList.add("dots-active");
-    }else if(count == 0) {
-        document.querySelector("#point2").classList.remove("dots-active");
-        document.querySelector("#point1").classList.add("dots-active"); 
     }else {
         document.querySelector("#point" + (count + 2)).classList.remove("dots-active");
         document.querySelector("#point" + (count + 1)).classList.add("dots-active"); 
