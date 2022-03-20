@@ -1,92 +1,39 @@
-let offset = 0; 
-const imgContainer = document.querySelector(".img-container");  
-const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
-let first = document.querySelector("#first-point");
-let second = document.querySelector("#second-point");
-let third = document.querySelector("#third-point");
-let fourth = document.querySelector("#fourth-point");
+const img = document.querySelectorAll(".line-container .img-container img");
+const imgCont = document.querySelector(".img-container")
+let count = 0;
+let width; 
 
-function checkPos(off) {
-    switch(off) {
-        case 0:
-            third.classList.remove("dots-active");
-            second.classList.remove("dots-active");
-            fourth.classList.remove("dots-active");
-            first.classList.add("dots-active");
-            break;
-        case 820:
-            third.classList.remove("dots-active");
-            first.classList.remove("dots-active");
-            fourth.classList.remove("dots-active");
-            second.classList.add("dots-active");    
-            break;
-        case 820 * 2:
-            second.classList.remove("dots-active");
-            first.classList.remove("dots-active");
-            fourth.classList.remove("dots-active");
-            third.classList.add("dots-active");
-            break;
-        case 820 * 3:
-            second.classList.remove("dots-active");
-            first.classList.remove("dots-active");
-            third.classList.remove("dots-active");
-            fourth.classList.add("dots-active");
-    }
+function init() {
+    width = document.querySelector(".line-container").offsetWidth + 7;
+    imgCont.style.width = width  * img.length + "px";
+    img.forEach(item => {
+        item.style.width =  width  + "px";
+        item.style.height = "auto"; 
+    })
+    roll();
 }
 
-rightArrow.addEventListener('click', function(e) { 
-    if(offset >= 820 * 3){
-        offset = 0;
-    }else {
-        offset += 820;  
+init();
+window.addEventListener("resize", init);
+
+
+document.querySelector(".right-arrow").addEventListener("click", function(e) { 
+    count++;
+    if(count >= img.length) {
+        count = 0;
     }
-    checkPos(offset);
-    imgContainer.style.left = -offset + "px";
-})
+    roll();
+});
 
-leftArrow.addEventListener('click', function(e) { 
-    if(offset <= 0){ 
-        offset = 820 * 3;
-    }else {
-        offset -= 820; 
+document.querySelector(".left-arrow").addEventListener("click", function(e) { 
+    count--;
+    if(count < 0) {
+        count = img.length - 1;
     }
-    checkPos(offset);   
-    imgContainer.style.left = -offset + "px";
-})
+    roll();
+});
 
-first.addEventListener('click', function(e) {
-    third.classList.remove("dots-active");
-    second.classList.remove("dots-active");
-    fourth.classList.remove("dots-active");
-    first.classList.add("dots-active");
-    offset = 0;
-    imgContainer.style.left = offset + "px";
-})
 
-second.addEventListener('click', function(e) {
-    third.classList.remove("dots-active");
-    first.classList.remove("dots-active");
-    fourth.classList.remove("dots-active");
-    second.classList.add("dots-active");
-    offset = 820;
-    imgContainer.style.left = -offset + "px";
-})
-
-third.addEventListener('click', function(e) {
-    second.classList.remove("dots-active");
-    first.classList.remove("dots-active");
-    fourth.classList.remove("dots-active");
-    third.classList.add("dots-active");
-    offset = 820 * 2;
-    imgContainer.style.left = -offset + "px";
-})
-
-fourth.addEventListener('click', function(e) {
-    second.classList.remove("dots-active");
-    first.classList.remove("dots-active");
-    third.classList.remove("dots-active");
-    fourth.classList.add("dots-active");
-    offset = 820 * 3;
-    imgContainer.style.left = -offset + "px";
-})
+function roll() {
+    imgCont.style.transform = "translate(-"+count*width+"px)";
+}
