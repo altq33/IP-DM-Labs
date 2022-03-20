@@ -23,6 +23,15 @@ document.querySelector(".right-arrow").addEventListener("click", function(e) {
         count = 0;
     }
     roll();
+    if(count == 0) {
+        document.querySelector("#point4").classList.remove("dots-active");
+        document.querySelector("#point1").classList.add("dots-active");
+    }else {
+        document.querySelector("#point" + count).classList.remove("dots-active");
+        document.querySelector("#point" + (count + 1)).classList.add("dots-active"); 
+    }
+   
+    
 });
 
 document.querySelector(".left-arrow").addEventListener("click", function(e) { 
@@ -31,9 +40,33 @@ document.querySelector(".left-arrow").addEventListener("click", function(e) {
         count = img.length - 1;
     }
     roll();
+    if(count == img.length - 1) {
+        document.querySelector("#point1").classList.remove("dots-active");
+        document.querySelector("#point4").classList.add("dots-active");
+    }else if(count == 0) {
+        document.querySelector("#point2").classList.remove("dots-active");
+        document.querySelector("#point1").classList.add("dots-active"); 
+    }else {
+        document.querySelector("#point" + (count + 2)).classList.remove("dots-active");
+        document.querySelector("#point" + (count + 1)).classList.add("dots-active"); 
+    }
 });
 
-
+// Функция смещения 
 function roll() {
     imgCont.style.transform = "translate(-"+count*width+"px)";
+}
+
+// Обработчик нажатия на поинты
+const toggles = document.querySelectorAll(".dots"); 
+
+for (let item of toggles) {
+    item.addEventListener("click", function(e) {
+        for(let toggle of toggles) {
+            toggle.classList.remove("dots-active");
+        }
+        e.target.classList.add("dots-active");
+        count = e.target.id[e.target.id.length - 1] - 1;
+        imgCont.style.transform = "translate(-"+count*width+"px)";
+    });
 }
