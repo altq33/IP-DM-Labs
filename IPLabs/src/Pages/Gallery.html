@@ -35,12 +35,12 @@
         </header>
         <main id="main">
             <div class="wrapper">
-                <div class="line-container">
+                <div class="line-container drag-box">
                     <div class="img-container">
-                        <img src="../../img/first-g.jpg" alt="1">
-                        <img src="../../img/second-g.jpg" alt="2">
-                        <img src="../../img/third-g.jpg" alt="3">
-                        <img src="../../img/fourth-g.jpg" alt="4">
+                        <img src="../../img/first-g.jpg" alt="1" draggable="true" class="js-img">
+                        <img src="../../img/second-g.jpg" alt="2" draggable="true" class="js-img">
+                        <img src="../../img/third-g.jpg" alt="3" draggable="true" class="js-img">
+                        <img src="../../img/fourth-g.jpg" alt="4" draggable="true" class="js-img">
                     </div>
                     <div class="buttons-container-gal">
                         <button class="left-arrow"></button>
@@ -53,10 +53,15 @@
                         <button class="right-arrow"></button>
                     </div>
                 </div>
+                <h1 class="favorite">Favorite</h1>
+                <div class="img-frame drag-box">
+                    
+                </div>
             </div>        
         </main>
     </div>
     <script src="../scripts/main.js"></script>
     <script src="../scripts/Gallery.js"></script>
+    <script src="../scripts/DnD.js"></script>
 </body>
 </html>

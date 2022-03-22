@@ -238,7 +238,8 @@ body {
 .wrapper {
   display: flex;
   max-width: 70.7%;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .line-container {
@@ -247,15 +248,41 @@ body {
   flex-direction: column;
   width: 80%;
   overflow: hidden;
-  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
   margin-bottom: 20px;
   padding-bottom: 20px;
+  box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+}
+
+.favorite {
+  font-weight: 800;
+  font-size: 55px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.img-frame {
+  display: flex;
+  width: 81.5%;
+  border: 10px solid whitesmoke;
+  box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #c9b6bc, #e0e5eb);
+  margin-bottom: 20px;
+}
+
+.hovered {
+  background: linear-gradient(90deg, #edefee, #c9c9c9);
 }
 
 .img-container {
   display: flex;
   position: relative;
   transition: all ease 1s;
+  cursor: grab;
 }
 
 .buttons-container-gal {
@@ -368,14 +395,13 @@ body {
   }
   .left-arrow {
     width: 30px;
-    height: 30px; 
+    height: 30px;
   }
   .right-arrow {
     width: 30px;
     height: 30px;
   }
 }
-
 
 @media (max-width: 670px) {
   .buttons-container-gal-points {
@@ -394,7 +420,6 @@ body {
     background-image: url(../../logo/circle-dot-solid.svg);
   }
 }
-
 
 @media (max-width: 480px) {
   .media-links {
