@@ -261,28 +261,29 @@ body {
   margin-bottom: 20px;
 }
 
+.img-container {
+  display: flex;
+  transition: all ease 1s;
+  cursor: grab;
+}
+
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 .img-frame {
   display: flex;
-  width: 81.5%;
+  width: 85.5%;
   border: 10px solid whitesmoke;
   box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.4);
   background: linear-gradient(90deg, #c9b6bc, #e0e5eb);
   margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .hovered {
   background: linear-gradient(90deg, #edefee, #c9c9c9);
-}
-
-.img-container {
-  display: flex;
-  position: relative;
-  transition: all ease 1s;
-  cursor: grab;
 }
 
 .buttons-container-gal {

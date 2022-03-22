@@ -4,7 +4,7 @@ window.onload = function() {
     const lineCont = document.querySelector(".line-container");
     let count = 0;
     let width; 
-    
+    // Покраска блока с кнопками
     function reColor() {
         switch(count) {
             case 0: 
@@ -21,7 +21,7 @@ window.onload = function() {
                 break;        
         }
     }
-
+    // Считаем ширины
     function init() {
         width = lineCont.offsetWidth + 9;
         imgCont.style.width = width  * img.length + "px";
@@ -34,9 +34,10 @@ window.onload = function() {
     }
 
     init();
+    // Вешаем обработчик на изменение размера окна
     window.addEventListener("resize", init);
 
-
+    // Логика правой стрелочки
     document.querySelector(".right-arrow").addEventListener("click", function(e) { 
         count++;
         if(count >= img.length) {
@@ -52,7 +53,7 @@ window.onload = function() {
         }
         reColor();
     });
-
+    // Логика левой стрелочки
     document.querySelector(".left-arrow").addEventListener("click", function(e) { 
         count--;
         if(count < 0) {
@@ -88,7 +89,4 @@ window.onload = function() {
             reColor();
         });
     }
-
-
-
 }
