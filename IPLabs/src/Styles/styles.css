@@ -80,6 +80,7 @@ h6 {
 /*--------------------*/
 body {
   font-family: Tahoma, sans-serif, Verdana, Geneva;
+  padding-top: 111px;
 }
 
 .wrap {
@@ -136,8 +137,8 @@ body {
 
 .links {
   display: flex;
+  width: 1000px;
   justify-content: space-between;
-  width: 729px;
 }
 
 .buttons-container {
@@ -158,7 +159,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #fff;
   width: 97px;
   height: 35px;
@@ -170,6 +170,7 @@ body {
   color: #000;
   position: relative;
   z-index: 5;
+  transition: all .5s ease;
 }
 
 .nav-links:hover {
@@ -178,6 +179,7 @@ body {
   transform: scale(1.1);
   background-color: #ff7862;
   color: white;
+  transition: all .5s ease;
 }
 
 .nav-links:first-child {
@@ -231,7 +233,6 @@ body {
   background-color: #04061b;
   width: 100%;
   flex: 1 1 auto;
-  padding-top: 111px;
 }
 
 .info-container {
@@ -297,13 +298,131 @@ body {
   border-radius: 6px;
 }
 
+.modal-sign-up {  
+  position: fixed;
+  top: 111px;
+  right: 0;
+  transform: translate(+100%);
+  width: 400px;
+  height: 100%;
+  display: flex;
+  background-color: #FFF;
+  color: black;
+  transition: all .5s ease;
+  padding: 25px;
+  z-index: 50;
+}
+
+.modal-sign-up-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 5px; 
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .3s ease;
+  user-select: none;
+}
+.close:hover {
+  transform: rotate(90deg);
+  transition: all .3s ease;
+}
+
+.form-title {
+  font-size: 48px;  
+  margin-bottom: 40px;
+}
+
+.modal-log-in {
+  position: fixed;
+  top: 111px;
+  right: 0;
+  transform: translate(+100%);
+  width: 500px;
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+  transition: all .5s ease;
+  padding: 25px;
+  z-index: 50;
+}
+
+.open {
+  transform: translate(0);
+  transition: all .5s ease;
+}
+
+body::-webkit-scrollbar{
+  width: 4px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #ff7862;
+  width: 3px;
+}
+
+.sign-up-form, .log-in-form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.fields {
+  display: block;
+  width: 80%;
+  height: 45px;
+  border: 3px solid black; 
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.fields::-webkit-input-placeholder {
+  color: black;
+  transition: all .1s ease;
+}
+.fields:focus {
+  border: 3px solid #ff7862;
+  transition: all .1s ease;
+}
+.submit { 
+  display: block;
+  height: 40px;
+  width: 40%;
+  border: 3px solid black; 
+  padding: 3px;
+  border-radius: 8px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-size: 20px;
+}
+.submit:hover {
+  transform: scale(1.1);
+  transition: all .3s ease;
+}
+
 @media (max-width: 1100px) {
   .more {
     font-size: 16px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .buttons-container {
     position: fixed;
     top: -100%;

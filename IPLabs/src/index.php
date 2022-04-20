@@ -8,29 +8,29 @@
     <title>MyPageHome</title>
 </head>
 <body>
-    <?php
-
-    ?>
     <div class="wrap">
         <header id="header">
             <div class="fixed-container">
                 <div class="head-container">
-                    <a href="../src/index.php"><div class="logo"></div></a>
+                    <a href="../src"><div class="logo"></div></a>
                     <div class="burger-menu"></div>  
                     <div class="links">
                       <nav id="nav">
                         <div class="buttons-container">
-                            <a class="nav-links" href="../src/index.php">Home</a>
-                            <a class="nav-links" href="./src/Pages/About.php">About me</a>
-                            <a class="nav-links" href="./src/Pages/Labs.php">Labs</a>
-                            <a class="nav-links" href="./Pages/Gallery.php">Gallery</a>
+                            <a class="nav-links" href="../src">Home</a>
+                            <a class="nav-links" href="../../IPLabs/src/Pages/About.php">About me</a>
+                            <a class="nav-links" href="../../IPLabs/src/Pages/Labs.php">Labs</a>
+                            <a class="nav-links" href="../../IPLabs/src/Pages/Gallery.php">Gallery</a>
+                            <a href="#" class="nav-links">Game</a>
+                            <a href="#" class="sign-up nav-links">Sign up</a>
+                            <a href="#" class="log-in nav-links">Log in</a>     
                         </div>                     
                       </nav>
                       <div class="media-links">
                         <a class="social" href="https://vk.com/altq33" target="blank"></a>
                         <a class="social" href="https://www.spotify.com/ru-ru/" target="blank"></a>
                         <a class="social" href="https://twitter.com/?lang=ru" target="blank"></a>
-                        <a class="social" href="https://www.facebook.com" target="blank"></a>
+                        <a class="social" href="https://www.facebook.com" target="blank"></a>                         
                       </div>
                     </div>
                 </div>
@@ -56,6 +56,28 @@
                 </div>
             </div>
         </main>
+    </div>
+    <div class="modal-sign-up">
+        <div class="modal-sign-up-content">
+            <span class="close-sign close">Х</span>
+            <h2 class="form-title">Sign up</h2>
+            <form action="" class="sign-up-form" method="POST">
+                <input class="fields" type="text" placeholder="Your login">
+                <input class="fields" type="password" placeholder="Your password">
+                <input class="submit" type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>  
+    <div class="modal-log-in">
+    <div class="modal-sign-up-content">
+            <span class="close-log close">Х</span>
+            <h2 class="form-title">Log in</h2>
+            <form action="" class="log-in-form" method="POST">
+                <input class="fields" type="text" placeholder="Your login">
+                <input class="fields" type="password" placeholder="Your password">
+                <input class="submit" type="submit" value="Log in">
+            </form>
+        </div>
     </div>
     <script src="../src/scripts/main.js"></script>
 </body>
