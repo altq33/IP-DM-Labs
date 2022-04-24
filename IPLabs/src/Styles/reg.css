@@ -1,0 +1,8 @@
+.nav-links:nth-child(6) {
+    background-color: #ff7862;
+    color: white;
+}
+.nav-links:nth-child(1) {
+    background-color: #fff;
+    color: black;
+}

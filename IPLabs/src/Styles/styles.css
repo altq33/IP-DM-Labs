@@ -298,22 +298,14 @@ body {
   border-radius: 6px;
 }
 
-.modal-sign-up {  
-  position: fixed;
-  top: 111px;
-  right: 0;
-  transform: translate(+100%);
-  width: 400px;
-  height: 100%;
+.form-wrap {
+  width: 100%;
   display: flex;
-  background-color: #FFF;
-  color: black;
-  transition: all .5s ease;
-  padding: 25px;
-  z-index: 50;
+  justify-content: center;
+  margin-top: 50px  
 }
 
-.modal-sign-up-content {
+.form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,43 +313,10 @@ body {
   width: 100%;
 }
 
-.close {
-  position: absolute;
-  top: 5px; 
-  right: 10px;
-  color: black;
-  cursor: pointer;
-  font-size: 20px;
-  transition: all .3s ease;
-  user-select: none;
-}
-.close:hover {
-  transform: rotate(90deg);
-  transition: all .3s ease;
-}
-
 .form-title {
+  color: white; 
   font-size: 48px;  
   margin-bottom: 40px;
-}
-
-.modal-log-in {
-  position: fixed;
-  top: 111px;
-  right: 0;
-  transform: translate(+100%);
-  width: 500px;
-  height: 100%;
-  display: flex;
-  background-color: #fff;
-  transition: all .5s ease;
-  padding: 25px;
-  z-index: 50;
-}
-
-.open {
-  transform: translate(0);
-  transition: all .5s ease;
 }
 
 body::-webkit-scrollbar{
@@ -381,7 +340,7 @@ body::-webkit-scrollbar-thumb{
 
 .fields {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 45px;
   border: 3px solid black; 
   border-radius: 6px;
@@ -405,8 +364,8 @@ body::-webkit-scrollbar-thumb{
   border: 3px solid black; 
   padding: 3px;
   border-radius: 8px;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   cursor: pointer;
   transition: all .3s ease;
   font-size: 20px;
@@ -414,6 +373,13 @@ body::-webkit-scrollbar-thumb{
 .submit:hover {
   transform: scale(1.1);
   transition: all .3s ease;
+}
+
+.already { 
+  font-size: 16px; 
+  color:#ff7862;
+  margin-top: 20px;
+  text-decoration: underline;
 }
 
 @media (max-width: 1100px) {
