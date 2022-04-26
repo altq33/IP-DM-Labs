@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,20 +19,26 @@
                 <div class="fixed-container">
                     <div class="form-wrap">
                         <div class="form-content">
-                            <h2 class="form-title">Log in</h2>
-                            <form action="#" class="sign-up-form" method="post" enctype="multipart/form-data">
-                                <input class="fields" type="text" placeholder="Your login" name="login">
+                            <h2 class="form-title">Sign up</h2>
+                            <form action="../server/sign.php" class="sign-up-form" method="post" enctype="multipart/form-data">
+                                <input class="fields" type="text" placeholder="Your login" name="login" value="<?php if(isset($login)) { echo $login; } ?>">
                                 <input class="fields" type="password" placeholder="Your password" name="password">
                                 <input class="fields" type="password" placeholder="Your password again" name="repass">
                                 <input class="submit" type="submit" value="Sign up" name="submit">
-                            </form>
-                            <a href="./login.php" class="already">Already have an account? Enter</a>
+                                <p class="account-p">Already have an account? <a href="./login.php" class="already">Enter</a></p>
+                                <?php
+                                if (isset($_SESSION["error"])) {
+                                    echo "<div class='error-container'>" . $_SESSION["error"] . "</div>";
+                                }
+                                unset($_SESSION["error"]);
+                                ?>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

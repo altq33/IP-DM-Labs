@@ -389,6 +389,18 @@ body::-webkit-scrollbar-thumb{
   border: 3px solid #ff7862;
   transition: all .1s ease;
 }
+.profile-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+
 .submit { 
   display: block;
   height: 40px;

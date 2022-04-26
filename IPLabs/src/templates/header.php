@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <header id="header">
     <div class="fixed-container">
         <div class="head-container">
@@ -24,6 +25,9 @@
                     <a class="social" href="https://www.facebook.com" target="blank"></a>
                 </div>
             </div>
+            <?php if (isset($_SESSION["auth"])) {
+                echo "<a class='profile-link'>" . $_SESSION["login"] . "</a>";
+            } ?>
         </div>
     </div>
 </header>

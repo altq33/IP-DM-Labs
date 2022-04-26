@@ -193,6 +193,7 @@ body {
   align-items: center;
   position: relative;
   z-index: 5;
+  margin-left: 20px;
 }
 
 .social {
@@ -375,11 +376,35 @@ body::-webkit-scrollbar-thumb{
   transition: all .3s ease;
 }
 
-.already { 
-  font-size: 16px; 
-  color:#ff7862;
+
+.account-p {
   margin-top: 20px;
+  color: #fff; 
+  font-size: 16px;
+}
+
+.already {
+  color:#ff7862;
   text-decoration: underline;
+  font-weight: bold;
+}
+
+.error-container { 
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.profile-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  margin-right: 20px;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 1100px) {

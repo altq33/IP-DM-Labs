@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +20,17 @@
                     <div class="form-content">
                         <h2 class="form-title">Log in</h2>
                         <form action="" class="log-in-form" method="post" enctype="multipart/form-data">
-                            <input class="fields" type="text" placeholder="Your login" required>
-                            <input class="fields" type="password" placeholder="Your password" required>
+                            <input class="fields" type="text" placeholder="Your login" name="login">
+                            <input class="fields" type="password" placeholder="Your password" name="password">
                             <input class="submit" type="submit" value="Log in">
                         </form>
-                        <a href="./login.php" class="already">Don't have an account yet? Sign up</a>
+                        <p class="account-p">Don't have an account yet? <a href="./registration.php" class="already">Sign up</a></p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

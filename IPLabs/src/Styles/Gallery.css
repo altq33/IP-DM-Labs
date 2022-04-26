@@ -435,6 +435,17 @@ body::-webkit-scrollbar-thumb{
   padding: 10px;
   background-color: #fff;
 }
+.profile-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
 
 .fields::-webkit-input-placeholder {
   color: black;
