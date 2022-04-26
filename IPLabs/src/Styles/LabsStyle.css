@@ -400,7 +400,13 @@ body::-webkit-scrollbar-thumb{
   margin-right: 20px;
   flex: 0 0 auto;
 }
-
+.logout { 
+  display: block;
+  color: black; 
+  font-size: 20px; 
+  z-index: 5;
+  margin-right: 20px;
+}
 .submit { 
   display: block;
   height: 40px;

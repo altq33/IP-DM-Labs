@@ -336,7 +336,13 @@ body {
   padding: 25px;
   z-index: 50;
 }
-
+.logout { 
+  display: block;
+  color: black; 
+  font-size: 20px; 
+  z-index: 5;
+  margin-right: 20px;
+}
 .open {
   transform: translate(0);
   transition: all .5s ease;

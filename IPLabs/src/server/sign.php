@@ -30,4 +30,8 @@ if (!$_SESSION['error']) {
     $_SESSION["login"] = $login;
 }
 
-include_once "../Pages/registration.php";
+if (isset($_SESSION["auth"])) {
+    header("location: ../index.php");
+} else {
+    include_once "../Pages/registration.php";
+}

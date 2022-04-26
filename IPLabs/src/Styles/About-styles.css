@@ -124,7 +124,13 @@ body {
   align-items: center;
   flex: 1 1 auto;
 }
-
+.logout { 
+  display: block;
+  color: black; 
+  font-size: 20px; 
+  z-index: 5;
+  margin-right: 20px;
+} 
 .logo {
   background-image: url(../../img/logo.png);
   width: 150px;
@@ -258,6 +264,7 @@ body {
   height: 337px;
   width: 45%;
   padding: 30px 10px 10px 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .about h2 {
@@ -278,6 +285,7 @@ body {
   background: #fff;
   padding: 10px;
   height: 112px;
+  border-radius: 10px 0 10px 0;
 }
 
 .more-about p {
@@ -292,6 +300,7 @@ body {
 .hobbies {
   height: 444px;
   margin-bottom: 20px;
+  border-radius: 0 0 10px 10px;
 }
 .modal-sign-up {  
   position: fixed;
@@ -478,6 +487,7 @@ body::-webkit-scrollbar-thumb{
   }
   .more-about {
     height: auto;
+    border-radius: 0;
   }
   .foot {
     margin-bottom: 20px;

@@ -14,8 +14,10 @@
                         <a class="nav-links" href="/IPLabs/src/Pages/Labs.php">Labs</a>
                         <a class="nav-links" href="/IPLabs/src/Pages/Gallery.php">Gallery</a>
                         <a href="#" class="nav-links">Game</a>
-                        <a href="/IPLabs/src/Pages/registration.php" class="nav-links">Sign up</a>
                         <a href="/IPLabs/src/Pages/login.php" class="nav-links">Log in</a>
+                        <?php if (!isset($_SESSION["auth"])) {
+                            echo "<a href='/IPLabs/src/Pages/registration.php' class='nav-links'>Sign up</a>";
+                        } ?>
                     </div>
                 </nav>
                 <div class="media-links">
@@ -27,6 +29,7 @@
             </div>
             <?php if (isset($_SESSION["auth"])) {
                 echo "<a class='profile-link'>" . $_SESSION["login"] . "</a>";
+                echo "<a class='logout' href='/IPLabs/src/server/logout.php'>Log out</a>";
             } ?>
         </div>
     </div>
