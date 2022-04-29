@@ -38,7 +38,6 @@ class DB
             $start_time_sql = microtime(true);
             $result = mysqli_query($obj->connect, $sql) or die("<br/><span style='color:red'>Error in SQL request:</span> " . $obj->connect->error);
             $time_sql = microtime(true) - $start_time_sql;
-            //      echo "<br/><br/><span style='color:blue'> <span style='color:green'># Запрос номер ".$obj->count_sql.": </span>".$sql."</span> <span style='color:green'>(".round($time_sql,4)." msec )</span>";
 
             return $result;
         }

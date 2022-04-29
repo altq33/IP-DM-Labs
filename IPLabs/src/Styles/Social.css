@@ -342,6 +342,11 @@ body {
   font-size: 20px; 
   z-index: 5;
   margin-right: 20px;
+  transition: all .4s ease;
+}
+.logout:hover { 
+  transform: translate(0, -2px);
+  transition: all .4s ease;
 }
 .open {
   transform: translate(0);
@@ -459,11 +464,10 @@ body::-webkit-scrollbar-thumb{
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .media-links {
     display: none;
   }
-  
   .burger-menu {
     order: 3;
   }
@@ -471,3 +475,10 @@ body::-webkit-scrollbar-thumb{
     width: 300px;
   }
 }
+
+@media (max-width: 450px) {
+  .logo {
+    display: none;
+  }
+}
+

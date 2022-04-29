@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = htmlspecialchars($_POST["password"]);
     $repass =  htmlspecialchars($_POST["repass"]);
     $_SESSION["error"] = "";
+    $_SESSION["login"] = $login;
+
     if ($password !== $repass) {
         $_SESSION["error"] = "Passwords don't match!";
     }
@@ -29,10 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if (!$_SESSION['error']) {
-        $query = "INSERT INTO `users` (`login`, `password`, `repass`) VALUES ('$login', MD5('$password'), MD5('$repass') )";
-        DB::query($query);
-        $_SESSION["auth"] = true;
-        $_SESSION["login"] = $login;
+        $checkLogin = "SELECT * FROM `users` WHERE `login` = '$login'";
+        $result = DB::query($checkLogin);
+        if (!(($item = DB::fetch_array($result)) != false)) {
+            $query = "INSERT INTO `users` (`login`, `password`, `repass`) VALUES ('$login', MD5('$password'), MD5('$repass') )";
+            DB::query($query);
+            $checkType = "SELECT `type` FROM `users` WHERE `login` = '$login'";
+            $typeCheckResult  = DB::query(($checkType));
+            $_SESSION['type'] = DB::fetch_array($typeCheckResult)['type'];
+            $_SESSION["auth"] = true;
+            $_SESSION["login"] = $login;
+        } else {
+            $_SESSION['error'] = "Login is already busy, try another!";
+        }
     }
 }
 

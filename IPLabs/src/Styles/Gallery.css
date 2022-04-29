@@ -446,12 +446,17 @@ body::-webkit-scrollbar-thumb{
   margin-right: 20px;
   flex: 0 0 auto;
 }
+.logout:hover { 
+  transform: translate(0, -2px);
+  transition: all .4s ease;
+}
 .logout { 
   display: block;
   color: black; 
   font-size: 20px; 
   z-index: 5;
   margin-right: 20px;
+  transition: all .4s ease;
 }
 .fields::-webkit-input-placeholder {
   color: black;
@@ -558,7 +563,7 @@ body::-webkit-scrollbar-thumb{
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .media-links {
     display: none;
   }
@@ -573,3 +578,10 @@ body::-webkit-scrollbar-thumb{
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+  .logo {
+    display: none;
+  }
+}
+

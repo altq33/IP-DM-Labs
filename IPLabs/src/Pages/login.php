@@ -23,7 +23,9 @@ session_start();
                     <div class="form-content">
                         <h2 class="form-title">Log in</h2>
                         <form action="../server/auth.php" class="log-in-form" method="post" enctype="multipart/form-data">
-                            <input class="fields" type="text" placeholder="Your login" name="login">
+                            <input class="fields" type="text" placeholder="Your login" name="login" value="<?php if (isset($login)) {
+                                                                                                                echo $login;
+                                                                                                            } ?>">
                             <input class="fields" type="password" placeholder="Your password" name="password">
                             <input class="submit" type="submit" value="Log in">
                         </form>
