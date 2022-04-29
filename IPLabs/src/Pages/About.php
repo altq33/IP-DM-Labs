@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include_once "../server/db.class.php";
+DB::getInstance();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

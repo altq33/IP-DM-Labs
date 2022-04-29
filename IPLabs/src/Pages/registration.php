@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include_once "../server/db.class.php";
+DB::getInstance();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +25,9 @@
                         <div class="form-content">
                             <h2 class="form-title">Sign up</h2>
                             <form action="../server/sign.php" class="sign-up-form" method="post" enctype="multipart/form-data">
-                                <input class="fields" type="text" placeholder="Your login" name="login" value="<?php if(isset($login)) { echo $login; } ?>">
+                                <input class="fields" type="text" placeholder="Your login" name="login" value="<?php if (isset($login)) {
+                                                                                                                    echo $login;
+                                                                                                                } ?>">
                                 <input class="fields" type="password" placeholder="Your password" name="password">
                                 <input class="fields" type="password" placeholder="Your password again" name="repass">
                                 <input class="submit" type="submit" value="Sign up" name="submit">
