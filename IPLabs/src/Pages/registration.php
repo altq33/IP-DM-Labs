@@ -1,7 +1,6 @@
 <?php
 session_start();
-include_once "../server/db.class.php";
-DB::getInstance();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +30,9 @@ DB::getInstance();
                                 <input class="fields" type="password" placeholder="Your password" name="password">
                                 <input class="fields" type="password" placeholder="Your password again" name="repass">
                                 <input class="submit" type="submit" value="Sign up" name="submit">
-                                <p class="account-p">Already have an account? <a href="./login.php" class="already">Enter</a></p>
+                                <p class="account-p">Already have an account? <a href="/IPLabs/src/Pages/login.php" class="already">Enter</a></p>
                                 <?php
-                                if (isset($_SESSION["error"])) {
+                                if (isset($_SESSION['error']) && $_SESSION["error"]) {
                                     echo "<div class='error-container'>" . $_SESSION["error"] . "</div>";
                                 }
                                 unset($_SESSION["error"]);

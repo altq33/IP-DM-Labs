@@ -34,7 +34,7 @@ class DB
         $obj = self::$_instance;
 
         if (isset($obj->connect)) {
-            $obj->count_sql++;
+
             $start_time_sql = microtime(true);
             $result = mysqli_query($obj->connect, $sql) or die("<br/><span style='color:red'>Error in SQL request:</span> " . $obj->connect->error);
             $time_sql = microtime(true) - $start_time_sql;

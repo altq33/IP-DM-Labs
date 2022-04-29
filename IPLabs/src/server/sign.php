@@ -7,8 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $login = htmlspecialchars($_POST["login"]);
     $password = htmlspecialchars($_POST["password"]);
     $repass =  htmlspecialchars($_POST["repass"]);
-    $_SESSION['error'] = "";
-
+    $_SESSION["error"] = "";
     if ($password !== $repass) {
         $_SESSION["error"] = "Passwords don't match!";
     }
