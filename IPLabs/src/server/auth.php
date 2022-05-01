@@ -26,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['type'] = DB::fetch_array($typeCheckResult)['type'];
             $_SESSION["auth"] = true;
             $_SESSION["login"] = $login;
+            $query = "SELECT * FROM `users` WHERE `login` = '$login'";
+            $avaCheckResult  = DB::query($query);
+            $_SESSION['avatar'] = DB::fetch_array($avaCheckResult)['avatar_name'];
         } else {
             $_SESSION['error2'] = "Incorrect login or password";
         }

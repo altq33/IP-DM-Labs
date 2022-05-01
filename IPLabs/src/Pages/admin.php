@@ -39,7 +39,13 @@ if (isset($_SESSION['auth']) && isset($_SESSION['type']) && $_SESSION['type'] ==
                                     <div class="table-row-item"><?= $item['id'] ?></div>
                                     <div class="table-row-item"><?= $item['login'] ?></div>
                                     <div class="table-row-item"><?= $item['type'] ?></div>
-                                    <div class="table-row-item"><?= $item['avatar'] ?></div>
+                                    <div class="table-row-item"><img class="user-avatar" src="<?php
+                                                                                                if (!empty($item['avatar_name'])) {
+                                                                                                    echo $item['avatar_name'];
+                                                                                                } else {
+                                                                                                    echo "../../img/profile.jpg";
+                                                                                                }
+                                                                                                ?>" alt="avatar"></div>
                                     <div class="table-row-item"><?= $item['avatar_name'] ?></div>
                                     <a href="./edit-user.php?id=<?= $item['id'] ?>" class="manage-user" title="Edit"></a>
                                     <a href="../server/delete-user.php?id=<?= $item['id'] ?>" class="delete-user" title="Delete"></a>

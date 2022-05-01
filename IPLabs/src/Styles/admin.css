@@ -13,7 +13,7 @@
 }
 .table-row {
     width: 100%;
-    height: 30px;
+    height: 50px;
     display: flex;
     justify-content: flex-start;
 }
@@ -27,6 +27,7 @@
     align-items: center;
     font-size: 18px;
     border: 1px solid #ff7862;
+    overflow: hidden;
 }
 .table-row .table-row-item:first-child {
     width: 5%; 
@@ -34,6 +35,13 @@
 .table-row .table-row-item:nth-child(3) {
     width: 7%;
 }
+.table-row .table-row-item:nth-child(5) {
+    justify-content: flex-start;
+}
+.table-row:first-child .table-row-item:nth-child(4), .table-row:first-child .table-row-item:nth-child(5) {
+    justify-content: center;
+}
+
 
 .delete-user {
     display: flex;
@@ -55,4 +63,8 @@
 .nav-links:first-child {
     color: black;
     background-color: white;
+}
+
+.user-avatar {
+    height: 90%;
 }
