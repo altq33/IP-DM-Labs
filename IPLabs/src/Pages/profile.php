@@ -11,7 +11,7 @@ if (isset($_SESSION['auth'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../Styles/styles.css">
-        <link rel="stylesheet" href="../Styles/reg.css">
+        <link rel="stylesheet" href="../Styles/profile.css">
         <title>Profile | <?= $_SESSION['login'] ?></title>
     </head>
 
@@ -20,7 +20,11 @@ if (isset($_SESSION['auth'])) {
             <?php include_once "../templates/header.php" ?>
             <main id="main">
                 <div class="fixed-container">
-                    <?php echo $_SERVER['PHP_SELF'] ?>
+                    <div class="profile-container">
+                        <div class="profile-content">
+                            <h2 class="profile-title"><?= $_SESSION['login'] ?> profile</h2>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
@@ -30,5 +34,5 @@ if (isset($_SESSION['auth'])) {
     </html>
 
 <?  } else {
-    echo "To view the profile, you must log in!";
+    header("Location: ./login.php");
 } ?>

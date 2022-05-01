@@ -29,7 +29,7 @@
             <?php if (isset($_SESSION["auth"])) {
                 echo "<a class='profile-link' href='/IPLabs/src/Pages/profile.php'>" . $_SESSION["login"] . "</a>";
                 if (isset($_SESSION['type']) && $_SESSION['type'] == 0) {
-                    echo "<a class='logout' href=''>Admin</a>";
+                    echo "<a class='logout' href='../Pages/admin.php'>Admin</a>";
                 }
                 echo "<a class='logout' href='/IPLabs/src/server/logout.php'>Log out</a>";
             } ?>

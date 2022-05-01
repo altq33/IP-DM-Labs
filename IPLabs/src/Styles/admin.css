@@ -1,0 +1,58 @@
+.table-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-top: 30px;
+}
+.table {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.table-row {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.table-row-item {
+    width: 25%;
+    height: 100%;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border: 1px solid #ff7862;
+}
+.table-row .table-row-item:first-child {
+    width: 5%; 
+}
+.table-row .table-row-item:nth-child(3) {
+    width: 7%;
+}
+
+.delete-user {
+    display: flex;
+    width: 5.5%;
+    height: 100%;
+    background-image: url(../../logo/delete.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.manage-user {
+    display: flex;
+    width: 5.5%;
+    height: 100%;
+    background-image: url(../../logo/manage.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 2%;
+}
+.nav-links:first-child {
+    color: black;
+    background-color: white;
+}
