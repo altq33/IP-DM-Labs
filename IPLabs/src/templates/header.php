@@ -27,7 +27,11 @@
                 </div>
             </div>
             <?php if (isset($_SESSION["auth"])) {
-                echo "<a class='profile-link' href='/IPLabs/src/Pages/profile.php' style='background-image: url(" . $_SESSION['avatar'] . "); background-repeat: no-repeat; background-size: cover; background-position: center;'></a>";
+                if (isset($_SESSION['avatar'])) {
+                    echo "<a class='profile-link' href='/IPLabs/src/Pages/profile.php' style='background-image: url(" . $_SESSION['avatar'] . "); background-repeat: no-repeat; background-size: cover; background-position: center;'></a>";
+                } else {
+                    echo "<a class='profile-link' href='/IPLabs/src/Pages/profile.php' style='background-image: url(/IPLabs/img/profile.jpg ); background-repeat: no-repeat; background-size: cover; background-position: center;'></a>";
+                }
                 if (isset($_SESSION['type']) && $_SESSION['type'] == 0) {
                     echo "<a class='logout' href='../Pages/admin.php'>Admin</a>";
                 }

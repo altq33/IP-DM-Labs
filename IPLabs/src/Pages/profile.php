@@ -43,7 +43,7 @@ if (isset($_SESSION['auth'])) {
                                                                     echo   $_SESSION['avatar'];
                                                                 } else {
                                                                     echo "../../img/profile.jpg";
-                                                                }          ?>" alt="">
+                                                                }          ?>" alt="avatar">
                                     <input id="file-chooser" type="file" name="avatar" class="file-chooser">
                                     <label for="file-chooser" class="file-chooser-label">
                                         <span class="file-wraper"><img class="file-img" src="../../logo/file-upload.svg" alt="Выбрать файл" width="25"></span>
