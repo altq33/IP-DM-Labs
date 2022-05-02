@@ -33,7 +33,7 @@
                     echo "<a class='profile-link' href='/IPLabs/src/Pages/profile.php' style='background-image: url(/IPLabs/img/profile.jpg ); background-repeat: no-repeat; background-size: cover; background-position: center;'></a>";
                 }
                 if (isset($_SESSION['type']) && $_SESSION['type'] == 0) {
-                    echo "<a class='logout' href='../Pages/admin.php'>Admin</a>";
+                    echo "<a class='logout' href='/IPLabs/src/Pages/admin.php'>Admin</a>";
                 }
                 echo "<a class='logout' href='/IPLabs/src/server/logout.php'>Log out</a>";
             } ?>

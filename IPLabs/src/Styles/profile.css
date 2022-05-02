@@ -112,3 +112,21 @@
     margin-top: 1px;
     user-select: none;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 850px) {
+    .profile-side-container {
+        flex-direction: column;
+    }
+    .profile-right {
+        width: 100%;
+        padding: 0;
+    }
+    .profile-left {
+        width: 100%;
+        order: 1;
+    }
+}

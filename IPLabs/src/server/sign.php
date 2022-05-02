@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 if (isset($_SESSION["auth"])) {
-    header("location: ../index.php");
+    header("location: ../Pages/profile.php");
 } else {
     include_once "../Pages/registration.php";
 }
