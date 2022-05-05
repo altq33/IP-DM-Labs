@@ -24,8 +24,8 @@ session_start();
                         <a href="../../../DMLabs/Lab1/src/index.html" class="lab-link">Lab1</a>
                         <a href="../../../DMLabs/Lab2/index.html" class="lab-link">Lab2</a>
                         <a href="../../../DMLabs/Lab3/src/index.html" class="lab-link">Lab3</a>
-                        <a href="#" class="lab-link">Lab4</a>
-                        <a href="#" class="lab-link">Lab5</a>
+                        <a href="../../../DMLabs/Lab4/src/index.php" class="lab-link">Lab4</a>
+                        <a href="../../../DMLabs/Lab5/src/index.php" class="lab-link">Lab5</a>
                     </div>
                 </div>
             </div>
