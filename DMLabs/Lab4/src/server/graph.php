@@ -54,7 +54,7 @@ for ($i = 0; $i < count($matrix); $i++) {
     $matrix[$i] =  preg_replace('/\s+/', ' ', $matrix[$i]);
     $matrix[$i] = explode(" ", $matrix[$i]);
 }
-$firstNode = $_POST['node1'];  
+$firstNode = $_POST['node1'];
 $secondNode = $_POST['node2'];
 
 if (isValid($matrix, $firstNode, $secondNode)) {

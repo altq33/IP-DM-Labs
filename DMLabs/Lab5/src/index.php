@@ -22,7 +22,7 @@
             <?php if (isset($_SESSION['matrix']) && !empty($_SESSION['matrix'])) echo $_SESSION['matrix'] ?>
         </div>
         <div class="error-message">
-            <?php if (isset($_SESSION['error']) && !empty($_SESSION['error'])) echo $_SESSION['error'] ?>
+            <?php if (isset($_SESSION['error5']) && !empty($_SESSION['error5'])) echo $_SESSION['error5'] ?>
         </div>
         <h2 class="by">Выполнил: Чанков Дмитрий ИВТАСбд-11</h2>
     </div>

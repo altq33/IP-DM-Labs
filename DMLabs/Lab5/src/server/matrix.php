@@ -2,27 +2,27 @@
 session_start();
 // validation 
 
-$_SESSION['error'] = "";
+$_SESSION['error5'] = "";
 
 function isValid($matrix)
 {
     $flag = true;
-    $_SESSION['error'] = "";
+    $_SESSION['error5'] = "";
     for ($i = 0; $i < count($matrix); $i++) {
         if (count($matrix[$i]) != count($matrix)) {
-            $_SESSION['error'] = "Матрица должна быть квадратной";
+            $_SESSION['error5'] = "Матрица должна быть квадратной";
         }
         for ($j = 0; $j < count($matrix[$i]); $j++) {
             if (!is_numeric($matrix[$i][$j]) && $matrix[$i][$j] != 0) {
-                $_SESSION['error'] = "Введенная матрица должна состоять из цифр!";
+                $_SESSION['error5'] = "Введенная матрица должна состоять из цифр!";
             }
         }
     }
 
     if ($matrix[0][0] == "") {
-        $_SESSION['error'] = "Матрица не должна быть пустой!";
+        $_SESSION['error5'] = "Матрица не должна быть пустой!";
     }
-    if ($_SESSION['error']) {
+    if ($_SESSION['error5']) {
         return false;
     } else {
         return true;
